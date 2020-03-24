@@ -1,0 +1,15 @@
+extraction:
+  cpp:
+     prepare:
+        packages:
+          - cmake
+     configure:
+        command:
+        - cmake --version
+        - cmake -S. -Bbuild
+     build:
+        command:
+        - cmake --build build --target all
+     test:
+        command:
+        - cmake --build build --target test
